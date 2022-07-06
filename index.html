@@ -13,9 +13,10 @@
      Weather Dashborad
     </header>
 
-    <form>
+    <form id="citySearch">
 Search for a City:
-<input type="text">
+<input type="text" id="cityInpt">
+<input type="button" value="Search" id="searchBtn">
 <input type="button" value="Sydney">
 <input type="button" value="Melborune">
 <input type="button" value="Brisbane">
@@ -26,7 +27,8 @@ Search for a City:
 <input type="button" value="Hobart">
     </form>
 
-<section>
+<section id="city">
+    <label>City </label>
     <label>Temp: </label>
     <label>Wind: </label>
     <label>Humidity: </label>

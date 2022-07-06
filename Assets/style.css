@@ -1,0 +1,28 @@
+header{
+    background-image: linear-gradient(to right,blue,darkblue);
+    color: white;
+    font-size: large;
+    height: 30px;
+    size: 100%;
+    text-align: center;
+}
+
+#citySearch{
+display: flex;
+flex-wrap: wrap;
+width: 20%;
+}
+
+#citySearch input{
+    width: 230px;
+    margin: 5px;
+}
+
+#cityInpt{
+    margin-bottom : 1500px;
+}
+
+#city{
+    display: flex;
+    width: 75%;
+}
