@@ -8,10 +8,10 @@ for (var index = 0; index < daysForecast.children.length; index++) {
     document.querySelector("#daysForecast").children[index].innerHTML = moment().add(index+1, 'days').format('L');
 }
 
-//7981694ef9c97bcfcb67516f35667455
+//m
 //https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
 
-//http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=7981694ef9c97bcfcb67516f35667455
+//http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=m
 
 async function forecastDaily(apiKey,city,countryCode,limit){
 var url1 = "http://api.openweathermap.org/geo/1.0/direct?q="+city +","+countryCode+"&limit="+limit+"&appid="+apiKey;
