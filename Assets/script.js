@@ -47,7 +47,6 @@ async function forecastDaily(apiKey, city, countryCode, limit) {
             var url2 = "https://api.openweathermap.org/data/2.5/onecall?" + longLat + "&exclude=minutely,hourly&units=metric&lang=en&appid=" + apiKey;
             var response2 = await fetch(url2);
             var data2 = await response2.json();
-            console.log(data2);
             domWriter(city, 6, data2);
         } else {
             alert("City not found, please try again");
