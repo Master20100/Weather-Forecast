@@ -31,7 +31,7 @@ for (let index = 0; index < localStorage.length; index++) {
 //the weather data returned will be used as a parameter in another fn called domWriter.
 
 async function forecastDaily(apiKey, city, countryCode, limit) {
-    var url1 = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + "," + countryCode + "&limit=" + limit + "&appid=" + apiKey;
+    var url1 = "https://api.openweathermap.org/geo/1.0/direct?q=" + city + "," + countryCode + "&limit=" + limit + "&appid=" + apiKey;
     var response1 = await fetch(url1);
     try {
         var data1 = await response1.json();
@@ -70,7 +70,7 @@ function domWriter(city, dayRange, weatherObject) {
 
         if (index == 0) {
             today.children[0].innerHTML = city + " " + currentDate;
-            today.children[1].src = "http://openweathermap.org/img/wn/" + weatherObject.daily[index].weather[0].icon + ".png";
+            today.children[1].src = "https://openweathermap.org/img/wn/" + weatherObject.daily[index].weather[0].icon + ".png";
             today.children[2].children[0].innerHTML = weatherObject.daily[0].temp.day;
             today.children[3].children[0].innerHTML = weatherObject.daily[0].humidity;
             today.children[4].children[0].innerHTML = weatherObject.daily[0].wind_speed;
@@ -79,7 +79,7 @@ function domWriter(city, dayRange, weatherObject) {
         }
         else {
             nextDays.children[index - 1].children[0].children[0].innerHTML = moment().add(index + 1, 'days').format('L');
-            nextDays.children[index - 1].children[1].src = "http://openweathermap.org/img/wn/" + weatherObject.daily[index].weather[0].icon + ".png";
+            nextDays.children[index - 1].children[1].src = "https://openweathermap.org/img/wn/" + weatherObject.daily[index].weather[0].icon + ".png";
             nextDays.children[index - 1].children[2].children[0].innerHTML = weatherObject.daily[index].temp.day;
             nextDays.children[index - 1].children[3].children[0].innerHTML = weatherObject.daily[index].humidity;
             nextDays.children[index - 1].children[4].children[0].innerHTML = weatherObject.daily[index].wind_speed;
