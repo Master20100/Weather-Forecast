@@ -32,8 +32,8 @@ for (let index = 0; index < localStorage.length; index++) {
 
 async function forecastDaily(apiKey, city, countryCode, limit) {
     var url1 = "https://api.openweathermap.org/geo/1.0/direct?q=" + city + "," + countryCode + "&limit=" + limit + "&appid=" + apiKey;
-    var response1 = await fetch(url1);
     try {
+        var response1 = await fetch(url1);
         var data1 = await response1.json();
         if (data1[0].name.toLowerCase().includes(city.toLowerCase())) {
             if (localStorage.getItem(city.toLowerCase()) == null) {
