@@ -34,3 +34,6 @@ each of these 2 sections is in the form of a flexbox to be able to control how i
 application photo
 app_photo.png
 
+links
+github link https://github.com/Master20100/Assignment_6
+live link https://master20100.github.io/Assignment_6/
