@@ -12,46 +12,74 @@
     <header>
      Weather Dashborad
     </header>
-
+<!-- left part,this form is where the seach happens -->
 <form id="citySearch">
  Search for a City:
 <input type="text" id="cityInpt">
 <input type="button" value="Search" id="searchBtn">
-<input type="button" value="Sydney">
-<input type="button" value="Melborune">
-<input type="button" value="Brisbane">
-<input type="button" value="Adelaide">
-<input type="button" value="Canberra">
-<input type="button" value="Perth">
-<input type="button" value="Darwin">
-<input type="button" value="Hobart">
-</form>
 
+</form>
+<!-- right part this is the where the data for today and underneath it for the next days get displayed -->
 <section id="city">
     <article id="currentCity">
-        <label>City Name: </label>
-        <label>City: </label>
-        <label>Temp: </label>
-        <label>Wind: </label>
-        <label>Humidity: </label>
-        <label>UV Index: </label>
+        <label>City Name: <span></span> </label>
+        <img src="">
+        <label>Temp: <span></span> </label>
+        <label>Humidity: <span></span> </label>
+        <label>Wind: <span></span> </label>
+        <label>UV Index: <span></span> </label>
     </article>
 
 <article id="daysForecast">
-<label id="day1"></label> 
-<label id="day2"></label> 
-<label id="day3"></label> 
-<label id="day4"></label> 
-<label id="day5"></label> 
+<section id="day1">
+  <label>Date: <span></span> </label>
+  <img src="">
+  <label>Temp: <span></span> </label>
+  <label>Humidity: <span></span> </label>
+  <label>Wind: <span></span> </label>
+  <label>UV Index: <span></span> </label>
+</section> 
+
+<section id="day2">
+  <label>Date: <span></span> </label>
+  <img src="">
+  <label>Temp: <span></span> </label>
+  <label>Humidity: <span></span> </label>
+  <label>Wind: <span></span> </label>
+  <label>UV Index: <span></span> </label>
+</section> 
+<section id="day3">
+  <label>Date: <span></span> </label>
+  <img src="">
+  <label>Temp: <span></span> </label>
+  <label>Humidity: <span></span> </label>
+  <label>Wind: <span></span> </label>
+  <label>UV Index: <span></span> </label>
+</section> 
+<section id="day4">
+  <label>Date: <span></span> </label>
+  <img src="">
+  <label>Temp: <span></span> </label>
+  <label>Humidity: <span></span> </label>
+  <label>Wind: <span></span> </label>
+  <label>UV Index: <span></span> </label>
+</section> 
+<section id="day5">
+  <label>Date: <span></span> </label>
+  <img src="">
+  <label>Temp: <span></span> </label>
+  <label>Humidity: <span></span> </label>
+  <label>Wind: <span></span> </label>
+  <label>UV Index: <span></span> </label>
+</section> 
 
 </article>
 </section>
 
 
 
-
-<script src="https://cdnjs.com/libraries/moment.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script type="text/javascript" src="./assets/script.js"></script>
+<script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+<script type="text/javascript" src="./assets/script.js"></script>
   </body>
 </html>
