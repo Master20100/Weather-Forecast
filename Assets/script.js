@@ -47,6 +47,7 @@ async function forecastDaily(apiKey, city, countryCode, limit) {
             var url2 = "https://api.openweathermap.org/data/2.5/onecall?" + longLat + "&exclude=minutely,hourly&units=metric&lang=en&appid=" + apiKey;
             var response2 = await fetch(url2);
             var data2 = await response2.json();
+            console.log(data2);
             domWriter(city, 6, data2);
         } else {
             alert("City not found, please try again");
@@ -71,11 +72,11 @@ function domWriter(city, dayRange, weatherObject) {
         if (index == 0) {
             today.children[0].innerHTML = city + " " + currentDate;
             today.children[1].src = "https://openweathermap.org/img/wn/" + weatherObject.daily[index].weather[0].icon + ".png";
-            today.children[2].children[0].innerHTML = weatherObject.daily[0].temp.day;
-            today.children[3].children[0].innerHTML = weatherObject.daily[0].humidity;
-            today.children[4].children[0].innerHTML = weatherObject.daily[0].wind_speed;
-            today.children[5].children[0].innerHTML = weatherObject.daily[0].uvi;
-            today.children[5].children[0].style.backgroundColor = UVColor(weatherObject.daily[0].uvi);
+            today.children[2].children[0].innerHTML = weatherObject.current.temp;
+            today.children[3].children[0].innerHTML = weatherObject.current.humidity;
+            today.children[4].children[0].innerHTML = weatherObject.current.wind_speed;
+            today.children[5].children[0].innerHTML = weatherObject.current.uvi;
+            today.children[5].children[0].style.backgroundColor = UVColor(weatherObject.current.uvi);
         }
         else {
             nextDays.children[index - 1].children[0].children[0].innerHTML = moment().add(index + 1, 'days').format('L');
