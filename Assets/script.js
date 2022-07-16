@@ -78,7 +78,7 @@ function domWriter(city, dayRange, weatherObject) {
             today.children[5].children[0].style.backgroundColor = UVColor(weatherObject.daily[0].uvi);
         }
         else {
-            nextDays.children[index - 1].children[0].children[0].innerHTML = moment().add(index + 1, 'days').format('L');
+            nextDays.children[index - 1].children[0].children[0].innerHTML = moment().add(index, 'days').format('L');
             nextDays.children[index - 1].children[1].src = "https://openweathermap.org/img/wn/" + weatherObject.daily[index].weather[0].icon + ".png";
             nextDays.children[index - 1].children[2].children[0].innerHTML = weatherObject.daily[index].temp.day;
             nextDays.children[index - 1].children[3].children[0].innerHTML = weatherObject.daily[index].humidity;
